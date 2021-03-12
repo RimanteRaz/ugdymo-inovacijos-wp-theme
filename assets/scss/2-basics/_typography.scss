@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@for $i from 1 to 7 {
+  h#{$i} {
+    padding: 1em 0em 0.5em 0em;
+    font-weight: 600;
+    font-size: 1rem * pow($mobile-text-ratio, (6-$i));
+    @media (min-width: $tablet) {
+      font-size: 1rem * pow($text-ratio, (6-$i));
+    }
+  }
+}
+
+.text-large {
+  font-size: 1rem * $text-ratio;
+}
+
+.text-medium {
+  font-size: 1rem;
+}
+
+.text-small {
+  font-size: 1rem / $text-ratio;
+}
+
+p {
+  padding-bottom: 0.75em;
+  line-height: 1.6;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.extra-bold {
+  font-weight: 700;
+}
+
+.section-title {
+  padding: 0;
+  font-weight: 700;
+}

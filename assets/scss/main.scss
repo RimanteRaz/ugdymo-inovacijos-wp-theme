@@ -1,0 +1,34 @@
+/* 
+Theme Name: Ugdymo Inovacijos
+Text Domain: Ugdymo Inovacijos
+Version: 1.0
+Description: Custom theme for the website ugdymoinovacijos.lt
+Tags:is
+Author: Rimantė Ražinskaitė
+Author URI:
+*/
+
+/* 1 - HELPERS */
+@import "1-helpers/functions";
+@import "1-helpers/variables";
+
+/* 2 - BASICS */
+@import "2-basics/buttons-links";
+@import "2-basics/forms";
+@import "2-basics/modules";
+@import "2-basics/typography";
+
+/* 3 - LAYOUT */
+@import "3-layout/footer";
+@import "3-layout/navigation";
+@import "3-layout/structure";
+
+/* 4 - Components */
+@import "4-components/archive";
+@import "4-components/comments";
+@import "4-components/front-page-featured-posts";
+@import "4-components/front-page-header";
+@import "4-components/front-page-submit";
+@import "4-components/search";
+@import "4-components/single-page";
+@import "4-components/single-post";

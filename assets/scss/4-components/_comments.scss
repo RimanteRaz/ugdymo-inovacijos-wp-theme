@@ -1,0 +1,90 @@
+.comment {
+  @extend .card;
+  margin-bottom: 2rem;
+  padding: 1rem 1.2rem;
+  @media (min-width: $tablet) {
+    padding: 1.5rem;
+  }
+  @media (min-width: $small-screen) {
+    padding: 2rem 4rem 1.4rem 2.5rem;
+  }
+  .comment-head {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    .avatar {
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      border-radius: 30px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .user-info {
+      padding-left: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      p {
+        padding: 0;
+      }
+      .text-small {
+        color: $dark-gray;
+      }
+    }
+  }
+
+  .comment-content {
+    padding-bottom: 1rem;
+  }
+}
+
+.comment-reply {
+  padding-left: 5vw;
+  @media (min-width: $tablet) {
+    padding-left: 10vw;
+  }
+  @media (min-width: $small-screen) {
+    padding-left: 6vw;
+  }
+}
+
+.add-comment {
+  @extend .card;
+  padding: 0 1rem 1.2rem 1rem;
+  @media (min-width: $tablet) {
+    padding: 1.5rem;
+  }
+  @media (min-width: $small-screen) {
+    padding: 0 4rem 1.4rem 2.5rem;
+  }
+  form {
+    margin-top: 0.25rem;
+    .row-2-col {
+      @media (min-width: $tablet) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .comment-col-50 {
+        @media (min-width: $tablet) {
+          width: 48%;
+        }
+      }
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      margin-top: 0.25rem;
+      margin-bottom: 0.8rem;
+    }
+    .btn-div {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+a {
+  color: $primary;
+  &:hover {
+    color: $primary-dark;
+  }
+  &:focus {
+    outline: none;
+    background-color: rgba($primary-light, 0.4);
+  }
+}
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 45px;
+  padding: 0.5em 2em;
+  border: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px $primary-light;
+  }
+}
+
+.btn-primary {
+  @extend .btn;
+  background-color: $primary;
+  color: $light-1;
+  &:hover {
+    background-color: $primary-dark;
+    color: $light-1;
+  }
+  &:focus {
+    background-color: $primary;
+  }
+}
+
+.btn-secondary {
+  @extend .btn;
+  background-color: rgba($light-gray, 0.8);
+  color: $dark;
+  &:hover {
+    background-color: $light-gray;
+  }
+  &:focus {
+    background-color: rgba($light-gray, 0.8);
+  }
+}
+
+.btn-light {
+  @extend .btn;
+  background-color: $light-1;
+  color: $dark;
+  &:hover {
+    background-color: $gray;
+    color: $dark;
+  }
+  &:focus {
+    background-color: $light-1;
+  }
+}
+
+.category {
+  display: inline-block;
+  background-color: rgba($primary, 0.05);
+  color: $primary;
+  border: 1px solid $primary;
+  border-radius: 50px;
+  padding: 0.2em 1.5em;
+  text-decoration: none;
+  &:hover {
+    background-color: rgba($primary, 0.2);
+    font-weight: 600;
+  }
+}
+
+.tag {
+  @extend .text-small;
+  display: inline-block;
+  background-color: rgba($dark, 0.05);
+  color: rgba($dark, 0.8);
+  border: 1px solid $light-gray;
+  border-radius: 50px;
+  padding: 0.2em 1em;
+  text-decoration: none;
+  font-weight: 400;
+  &:hover {
+    background-color: rgba($dark, 0.15);
+    color: rgba($dark, 1);
+  }
+}
