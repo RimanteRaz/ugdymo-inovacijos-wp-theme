@@ -1,68 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <?php 
-  wp_head();
-  ?>
-  <!-- <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet"> -->
-  <title>Ugdymo inovacijos</title>
-</head>
-
-<body>
-  <nav <?php echo (is_admin_bar_showing()) ? ' style="top: 32px;"' : ''; ?>>
-    <div class="nav-container">
-      <div class="logo">
-        <h6>Ugdymo inovacijos</h6>
-      </div>
-      <div class="nav-bar">
-        <ul class="nav-links primary-menu">
-          <li><a href="front-page.html">Pagrindinis</a></li>
-          <li><a href="archive.html">Inovacijos</a></li>
-          <li><a href="">Žemėlapis</a></li>
-        </ul>
-        <ul class="nav-links secondary-menu">
-          <li><a href="search.html">
-            <span class="material-icons-outlined">search</span>Paieška</a>
-          </li>
-        </ul>
-        <a href="page.html" class="nav-cta btn-light">Atsiųskite savo inovaciją</a>
-      </div>
-      <div class="dt-nav-bar">
-        <div class="dt-nav-links dt-primary-menu">
-          <ul>
-            <li><a href="front-page.html">Pagrindinis</a></li>
-            <li><a href="archive.html">Inovacijos</a></li>
-            <li><a href="404.html">Žemėlapis</a></li>
-          </ul>
-        </div>
-        <div class="dt-nav-cta">
-          <a href="page.html" class="btn-light"><img
-              src="https://img.icons8.com/metro/26/000000/paper-plane.png" /><span>Atsiųskite savo inovaciją</span></a>
-        </div>
-        <div class="dt-nav-links dt-secondary-menu">
-          <ul>
-            <li><a href="search.html">
-              <span class="material-icons-outlined">search</span>Paieška</a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HEADER -->
+<?php
+  get_header();
+?>
+  
+  <!-- FRONT PAGE HEADER -->
   <header class="front-page-header">
     <div class="row-2-col container">
       <div class="col-50 left">
@@ -189,40 +129,6 @@
 
   </div>
 
-  <!-- FOOTER -->
-  <footer class="dark-bg">
-    <div class="section container footer">
-      <div class="left">
-        <h5><strong>Prenumeruokite naujienas</strong></h6>
-          <p>Užpildykite žemiau esančią formą ir mes Jums pranešime apie naujus įrašus.</p>
-          <form class="subscribeForm" action="">
-            <label for="email" class="text-medium">Jūsų el. pašto adresas:</label>
-            <input type="email" id="email" name="email" placeholder="El. pašto adresas...">
-            <div class="checkbox">
-              <label for="privacyPolicy" class="text-small">
-                <input type="checkbox" name="privacyPolicy" id="privacyPolicy" value="agree">
-                <span>
-                  Susipažinau su duomenų naudojimo aprašu ir sutinku, kad mano pateikti duomenys būtų naudojami
-                  informavimo tikslais.
-                </span>
-              </label>
-            </div>
-            <div class="btn-div">
-              <button type="submit" value="submit" class="btn-light text-medium">Pateikti</button>
-            </div>
-          </form>
-      </div>
-      <div class="right text-small">
-        <p>Puslapiu <a href="">ugdymoinovacijos.lt</a> rūpinasi asociacija „Žinių ekonomikos forumas“</p>
-        <p>Jei turite klausimų susisiekite su mumis el. p. <a href="">info@zef.lt</a> arba tel. nr. +37060000000.
-          Daugiau informacijos: <a href="">www.zef.lt</a>.</p>
-      </div>
-    </div>
-  </footer>
-</body>
-
-<?php 
-  wp_footer()
+<?php
+  get_footer();
 ?>
-
-</html>
