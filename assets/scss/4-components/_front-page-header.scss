@@ -1,0 +1,108 @@
+.front-page-header {
+  padding: 3rem 0 5rem 0;
+  @media (min-width: $tablet) {
+    padding: 8rem 0 6rem 0;
+  }
+  @media (min-width: $small-screen) {
+    padding: 9rem 0 7rem 0;
+  }
+  @media (min-width: $large-screen) {
+    padding: 11rem 0 9rem 0;
+    // padding: 5rem 0;
+  }
+}
+
+.front-page-header {
+  color: $light-1;
+  background: /*url("../../images/header-05.png"),*/ linear-gradient(
+    #141414,
+    #052835
+  );
+  background-size: cover;
+  @media (min-width: $small-screen) {
+    background-repeat: repeat-x;
+    background-size: contain;
+  }
+}
+
+.front-page-header .left {
+  padding: 0 2rem 0 0;
+  max-width: 60ch;
+  @media (min-width: $small-screen) {
+    padding: 0 3rem 0 0;
+  }
+  h1 {
+    padding: 0 0 0.5em 0;
+  }
+  p {
+    padding: 0;
+  }
+}
+
+.front-page-header .right {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 2rem 0 0;
+  max-width: 60ch;
+  @media (min-width: $tablet) {
+    justify-content: left;
+    padding: 2rem 2rem 0 2rem;
+  }
+  @media (min-width: $small-screen) {
+    position: relative;
+    padding-top: 190px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  @media (min-width: $large-screen) {
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 0.25rem 4rem;
+  }
+}
+
+.header-lithuania {
+  display: none;
+  @media (min-width: $small-screen) {
+    display: block;
+    position: absolute;
+    top: -2rem;
+    right: 0;
+    width: 400px;
+    height: auto;
+  }
+  @media (min-width: $large-screen) {
+    top: -5rem;
+    width: 500px;
+  }
+}
+
+.header-stars {
+  display: none;
+  @media (min-width: $tablet) {
+    display: block;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    height: 350px;
+    width: auto;
+  }
+  @media (min-width: $small-screen) {
+    top: -9rem;
+    right: -3rem;
+    height: 400px;
+  }
+  @media (min-width: $large-screen) {
+    top: -13rem;
+    right: -5rem;
+    height: 450px;
+  }
+}
+
+.header-cta {
+  z-index: 1;
+}
+
+.header-wave {
+  background-color: $light-2;
+}

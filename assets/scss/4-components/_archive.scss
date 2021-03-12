@@ -1,0 +1,49 @@
+.blog-post {
+  @extend .card;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90vw;
+  @media (min-width: $tablet) {
+    width: 28rem;
+  }
+  .img-div {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .info-div {
+    padding: 1.5rem 2.5rem 1rem 2rem;
+    h4 {
+      padding: 1rem 0 0.5rem 0;
+      .title {
+        color: $dark;
+        text-decoration: none;
+        font-weight: 600;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+    p {
+      padding: 0.4rem 0;
+    }
+  }
+  .read-more {
+    color: $dark;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 0rem 1rem 0rem;
+    border-top: 1px solid rgba($light-gray, 0.5);
+    &:hover {
+      background-color: rgba($light-gray, 0.5);
+      color: rgba($dark, 0.9);
+    }
+    div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

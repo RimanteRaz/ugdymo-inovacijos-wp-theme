@@ -1,0 +1,30 @@
+{
+  "name": "ugdymoinovacijos",
+  "version": "1.0.0",
+  "description": "This is a custom Wordpress theme for ugdymoinovacijos.lt - a website for innovative education practices.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RimanteRaz/ugdymo-inovacijos-wp-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RimanteRaz/ugdymo-inovacijos-wp-theme/issues"
+  },
+  "homepage": "https://github.com/RimanteRaz/ugdymo-inovacijos-wp-theme#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.2.8"
+  }
+}

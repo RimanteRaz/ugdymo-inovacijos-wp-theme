@@ -1,0 +1,80 @@
+.featured-posts {
+  padding: 3rem 0 4rem 0;
+  @media (min-width: $tablet) {
+    padding: 4rem 0 5rem 0;
+  }
+  @media (min-width: $small-screen) {
+    padding-bottom: 7rem;
+  }
+  @media (min-width: $large-screen) {
+    padding-bottom: 9rem;
+  }
+}
+
+.new-post {
+  @extend .card;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .img-div {
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .info-div {
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    .title {
+      padding: 1rem 0rem 0.5rem 0rem;
+      a {
+        color: $dark;
+        text-decoration: none;
+        font-weight: 600;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+    .meta {
+      color: $dark-gray;
+    }
+  }
+  .read-more {
+    color: $dark;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 0rem 1rem 0rem;
+    border-top: 1px solid rgba($light-gray, 0.5);
+    &:hover {
+      background-color: $gray;
+      color: rgba($dark, 0.9);
+    }
+    div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.title-row {
+  margin-bottom: $col-gap;
+  padding-right: 0.8rem;
+  .read-all-1 {
+    display: none;
+    @media (min-width: $small-screen) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}
+
+.read-all-2 {
+  padding-top: calc(2 *#{$col-gap});
+  display: flex;
+  justify-content: center;
+  @media (min-width: $small-screen) {
+    display: none;
+  }
+}

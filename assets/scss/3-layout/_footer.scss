@@ -1,0 +1,28 @@
+.footer {
+  padding-bottom: 8rem;
+  @media (min-width: $small-screen) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  a {
+    color: $light-1;
+    text-decoration-color: rgba($light-1, 0.5);
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      border-radius: 5px;
+    }
+  }
+  .left {
+    max-width: 45ch;
+    padding-bottom: 2rem;
+    h5 {
+      padding-top: 0;
+    }
+  }
+  .right {
+    max-width: 50ch;
+  }
+}
