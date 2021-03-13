@@ -14,10 +14,10 @@
   <nav <?php echo (is_admin_bar_showing()) ? ' style="top: 32px;"' : ''; ?>>
     <div class="nav-container">
       <div class="logo">
-        <h6>Ugdymo inovacijos</h6>
+        <h6><a href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h6>
       </div>
       <div class="nav-bar">
-        <ul class="nav-links primary-menu">
+        <ul class="nav-links primary-menu"> 
           <li><a href="front-page.html">Pagrindinis</a></li>
           <li><a href="archive.html">Inovacijos</a></li>
           <li><a href="">Žemėlapis</a></li>
