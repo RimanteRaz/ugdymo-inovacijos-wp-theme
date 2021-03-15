@@ -971,10 +971,6 @@ footer {
   background: -o-linear-gradient(#141414, #052835);
   background: linear-gradient(#141414, #052835);
   background-size: cover; }
-  @media (min-width: 62em) {
-    .front-page-header {
-      background-repeat: repeat-x;
-      background-size: contain; } }
 
 .front-page-header .left {
   padding: 0 2rem 0 0;

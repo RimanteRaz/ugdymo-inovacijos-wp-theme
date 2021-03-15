@@ -3,17 +3,34 @@
 ?>
   
   <!-- FRONT PAGE HEADER -->
-  <header class="front-page-header">
+  <header class="front-page-header" style="background: url(<?php echo esc_url(the_field('hero_bg_img'));?>) contain repeat-x, linear-gradient(#141414, #052835)">
     <div class="row-2-col container">
       <div class="col-50 left">
-        <h1>Lietuvos mokyklose gausu <strong>stebuklų</strong></h1>
-        <p>Tam, kad pasisemtum įkvepiančių ugdymo pavyzdžių nebūtina keliauti į Švediją. Ieškok ir dalinkis gerosiomis
-          praktikomis kartu su kolegomis mokytojais iš visos Lietuvos!</p>
+        <?php 
+          if(get_field('hero_title')):
+            echo wp_kses_post(the_field('hero_title'));
+          endif; ?>
+        <?php 
+          if(get_field('hero_text')):
+            echo wp_kses_post(the_field('hero_text'));
+          endif; ?>
       </div>
       <div class="col-50 right">
-        <img src="images/stars-06.svg" alt="" class="header-stars">
-        <img src="images/lithuania-with-pointers-04.svg" alt="" class="header-lithuania">
-        <button class="header-cta btn-light text-large">Žiūrėti žemėlapį</button>
+        <?php if (get_field('hero_stars')): ?>
+          <img src=<?php echo esc_url(the_field('hero_stars')); ?> alt="" class="header-stars">
+        <?php endif; ?>
+        <?php if (get_field('hero_img')): ?>
+          <img src=<?php echo esc_url(the_field('hero_img')); ?> alt="" class="header-lithuania">
+        <?php endif; ?>
+        <?php 
+        $link = get_field('hero_cta');
+          if ($link): 
+            $link_url = $link['url'];
+            $link_title = $link['title'];
+            $link_target = $link['target'] ? $link['target'] : '_self';
+          ?>
+          <a class="header-cta btn-light text-large" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" ><?php echo esc_html($link_title); ?></a>
+        <?php endif; ?>
       </div>      
     </div>
   </header>

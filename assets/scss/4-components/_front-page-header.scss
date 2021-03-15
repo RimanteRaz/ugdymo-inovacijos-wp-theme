@@ -14,14 +14,12 @@
 
 .front-page-header {
   color: $light-1;
-  background: /*url("../../images/header-05.png"),*/ linear-gradient(
-    #141414,
-    #052835
-  );
+  background: /*url("http://localhost/ugdymoinovacijos/wp-content/uploads/2021/03/header-05.png"),*/
+    linear-gradient(#141414, #052835);
   background-size: cover;
   @media (min-width: $small-screen) {
-    background-repeat: repeat-x;
-    background-size: contain;
+    // background-repeat: repeat-x;
+    // background-size: contain;
   }
 }
 
