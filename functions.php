@@ -8,15 +8,16 @@ function ugdino_theme_support(){
 add_action('after_setup_theme', 'ugdino_theme_support');
 
 // Function for the menu: 
-// function internactional_menus(){
-//     $locations = array(
-//         'primary' => "Desktop Primary Menu"
-//     );
+function ugdino_menus(){
+    $locations = array(
+        'primary' => "Mobile primary, desktop left",
+        'secondary' => "Mobile secondary, desktop right"
+    );
 
-//     register_nav_menus($locations);
-// }
+    register_nav_menus($locations);
+}
 
-// add_action('init', 'internactional_menus');
+add_action('init', 'ugdino_menus');
     
 
 function ugdino_register_styles() {
