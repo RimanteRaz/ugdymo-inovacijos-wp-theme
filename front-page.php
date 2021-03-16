@@ -3,7 +3,8 @@
 ?>
   
   <!-- FRONT PAGE HEADER -->
-  <header class="front-page-header" style="background: url(<?php echo esc_url(the_field('hero_bg_img'));?>) contain repeat-x, linear-gradient(#141414, #052835)">
+  <header class="front-page-header" style="background: center/ contain repeat-x url('<?php echo esc_url(the_field('hero_bg_img'));?>'), linear-gradient(#141414, #052835);"> 
+  <!-- contain repeat-x, linear-gradient(#141414, #052835) -->
     <div class="row-2-col container">
       <div class="col-50 left">
         <?php 
