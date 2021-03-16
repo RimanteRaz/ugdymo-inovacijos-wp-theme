@@ -23,12 +23,12 @@
           <img src=<?php echo esc_url(the_field('hero_img')); ?> alt="" class="header-lithuania">
         <?php endif; ?>
         <?php 
-        $link = get_field('hero_cta');
-          if ($link): 
-            $link_url = $link['url'];
-            $link_title = $link['title'];
-            $link_target = $link['target'] ? $link['target'] : '_self';
-          ?>
+          $link = get_field('hero_cta');
+            if ($link): 
+              $link_url = $link['url'];
+              $link_title = $link['title'];
+              $link_target = $link['target'] ? $link['target'] : '_self';
+        ?>
           <a class="header-cta btn-light text-large" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" ><?php echo esc_html($link_title); ?></a>
         <?php endif; ?>
       </div>      
@@ -131,14 +131,25 @@
       <div class="container">
         <div class="submit-section">
           <div class="text-card">
-            <h4>Pasidalinkite savo inovacija</h4>
-            <p>Siekiame, kad šis puslapis taptų vieta, kurioje kiekvienas galėtų rasti kažką naujo ir aktualaus, ką
-              galėtų pritaikyti ugdymo(si) procese. Juk dalintis apsimoka!</p>
+            <?php if(get_field('submit_card_title')): ?>
+              <h4><?php echo wp_kses_post(the_field('submit_card_title')); ?></h4>
+            <?php endif; ?>
+            <?php if(get_field('submit_card_text')): ?>
+              <p><?php echo wp_kses_post(the_field('submit_card_text')); ?></p>
+            <?php endif; ?>
             <div class="button">
-              <a href="" class="btn-primary text-medium">Pildyti formą</a>
+            <?php 
+              $link = get_field('submit_card_btn');
+                if ($link): 
+                  $link_url = $link['url'];
+                  $link_title = $link['title'];
+                  $link_target = $link['target'] ? $link['target'] : '_self';
+            ?>
+              <a class="btn-primary text-medium" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>" ><?php echo esc_html($link_title); ?></a>
+            <?php endif; ?>
             </div>
           </div>
-          <img src="images/woman-with-laptop.svg" alt="" class="submit-section-img">
+          <img src="<?php echo esc_url(the_field('submit_side_img')); ?>" alt="" class="submit-section-img">
         </div>
       </div>
       
