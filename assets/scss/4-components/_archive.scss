@@ -1,12 +1,38 @@
+.archive-title {
+  padding-bottom: 2rem;
+}
+
+.grid {
+  margin: 0 3vw;
+  @media (min-width: $small-screen) {
+    margin: 0 8vw;
+  }
+}
+
+.grid-sizer,
+.grid-item {
+  width: 90vw;
+  @media (min-width: $tablet) {
+    width: 400px;
+  }
+  @media (min-width: $small-screen) {
+    width: 37vw;
+  }
+}
+
+.grid-item {
+  margin-bottom: 3rem;
+}
+
+.gutter-sizer {
+  width: 8vw;
+}
+
 .blog-post {
   @extend .card;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 90vw;
-  @media (min-width: $tablet) {
-    width: 28rem;
-  }
   .img-div {
     img {
       display: block;

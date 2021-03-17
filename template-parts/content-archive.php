@@ -1,18 +1,22 @@
-<div class="blog-post">
+<div class="grid-item blog-post">
     <div class="img-div">
         <img src="<?php the_post_thumbnail_url('large'); ?>" alt="">
     </div>
     <div class="info-div">
         <div class="categories">
-        <a class="category" href="">Category</a>
+            <div class="category">
+                <?php the_category(); ?>
+            </div>
         </div>
         <h4><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h4>
         <p class="text-small">Mokytoja Vardenė Pavardenė<br>Miesto Rašytojo gimnazija</p>
-        <p><?php the_excerpt(); ?></p>
+        <div>
+            <?php the_excerpt(); ?>
+        </div>
     </div>
     <a href="<?php the_permalink(); ?>" class="read-more">
         <div>
-        Skaityti
+        Skaityti  
         </div>
     </a>
 </div>

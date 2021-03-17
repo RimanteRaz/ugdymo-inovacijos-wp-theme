@@ -17,3 +17,23 @@ const navToggle = () => {
 };
 
 navToggle();
+
+// Masonry layot (WP core)
+
+jQuery(function ($) {
+  var $grid = $(".grid").masonry({
+    // options
+    itemSelector: ".grid-item",
+    // columnWidth: 500,
+    columnWidth: ".grid-sizer",
+    // gutter: 120,
+    gutter: ".gutter-sizer",
+    percentPosition: true,
+    horizontalOrder: true,
+    // fitWidth: true,
+  });
+  // layout Masonry after each image loads
+  $grid.imagesLoaded().progress(function () {
+    $grid.masonry("layout");
+  });
+});

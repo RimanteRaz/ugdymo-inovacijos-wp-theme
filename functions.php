@@ -29,8 +29,9 @@ add_action('wp_enqueue_scripts', 'ugdino_register_styles');
 
 
 function ugdino_register_scripts() {
-    wp_enqueue_script('magic-grid-cdn', 'https://unpkg.com/magic-grid/dist/magic-grid.cjs.js', array(), '3.2.4', true);
-    wp_enqueue_script('masonry', get_template_directory_uri().'/assets/js/masonry.js', array(), rand(111,9999), true);
+    // wp_enqueue_script('magic-grid-cdn', 'https://unpkg.com/magic-grid/dist/magic-grid.cjs.js', array(), '3.2.4', true);
+    // wp_enqueue_script('magic-grid', get_template_directory_uri().'/assets/js/masonry.js', array(), rand(111,9999), true);
+    wp_enqueue_script('masonry');
     wp_enqueue_script('ugdino-script', get_template_directory_uri().'/assets/js/app.js', array(), rand(111,9999), true);
 }
 

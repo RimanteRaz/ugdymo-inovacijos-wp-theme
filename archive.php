@@ -2,8 +2,12 @@
   get_header();
 ?>
 <div class="content section">
-    <div class="archive-grid">
-
+    <div class="container">
+        <?php the_archive_title( '<h2 class="archive-title">', '</h2>' ); ?>
+    </div>
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
         <?php
             if( have_posts() ) {
                 while( have_posts() ) {
