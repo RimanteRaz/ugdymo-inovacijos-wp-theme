@@ -4,15 +4,15 @@
   padding: 1rem;
   @media (min-width: $tablet) {
     padding: 1rem 3rem 2rem 3rem;
-    .post-text {
-      padding-right: 1rem;
-    }
+    // .post-text {
+    //   padding-right: 1rem;
+    // }
   }
   @media (min-width: $small-screen) {
     padding: 1rem 4rem 3rem 4rem;
-    .post-text {
-      padding-right: 1rem;
-    }
+    // .post-text {
+    //   padding-right: 1rem;
+    // }
   }
 
   .title {
@@ -63,7 +63,7 @@
   @extend .card;
   padding: 1rem 1rem 1rem 1.5rem;
   .cat-div {
-    .category {
+    .category ul li {
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
     }
@@ -93,13 +93,13 @@
 
 .article-sidebar,
 .article-sidebar-mobile {
+  h6 {
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+  }
   .author {
-    padding-top: 1.85rem;
+    padding-top: 1rem;
     padding-right: 1rem;
-    padding-bottom: 0.25rem;
-    h6 {
-      padding-top: 0;
-    }
     .author-data {
       padding-bottom: 0.5rem;
       p {
@@ -111,6 +111,13 @@
         padding: 0;
       }
     }
+  }
+  .cat-div {
+    padding-top: 1.5rem;
+  }
+  .tag-div {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
   }
 }
 
