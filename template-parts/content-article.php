@@ -21,8 +21,8 @@
         <div class="author">
             <h6>Inovaciją atsiuntė:</h6>
             <div class="author-data text-small">
-                <p class="">Mokytoja Vardenė Pavardenė</p>
-                <p>Miesto Rašytojo gimnazija</p>
+                <p><?php echo esc_html(the_field("authors_name")); ?></p>
+                <p><?php echo esc_html(the_field("authors_school")); ?></p>
             </div>
             <div class="contact-author text-small">
                 <p class=" bold">Susisiekite:</p>
@@ -48,12 +48,12 @@
         <div class="author">
         <h6>Inovaciją atsiuntė:</h6>
         <div class="author-data text-small">
-            <p class="">Mokytoja Vardenė Pavardenė</p>
-            <p>Miesto Rašytojo gimnazija</p>
+            <p><?php echo esc_html(the_field("authors_name")); ?></p>
+            <p><?php echo esc_html(the_field("authors_school")); ?></p>
         </div>
         <div class="contact-author text-small">
             <p class=" bold">Susisiekite:</p>
-            <p><a href="" class="">mokytoja@gmail.com</a></p>
+            <?php echo wp_kses_post(the_field('authors_contact'));?>
         </div>
         </div>
         <div class="cat-div">

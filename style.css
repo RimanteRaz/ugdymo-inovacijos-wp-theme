@@ -785,15 +785,19 @@ footer {
   .blog-post .info-div {
     padding: 1.5rem 2.5rem 1rem 2rem; }
     .blog-post .info-div h4 {
-      padding: 1rem 0 0.5rem 0; }
+      padding: 1rem 0 0 0; }
       .blog-post .info-div h4 .title {
         color: #141414;
         text-decoration: none;
         font-weight: 600; }
         .blog-post .info-div h4 .title:hover {
           color: #00576b; }
+    .blog-post .info-div .author {
+      padding: 0.25rem 0 0 0; }
+    .blog-post .info-div .excerpt {
+      padding: 1rem 0 0 0; }
     .blog-post .info-div p {
-      padding: 0.4rem 0; }
+      padding: 0; }
   .blog-post .read-more {
     color: #141414;
     text-decoration: none;

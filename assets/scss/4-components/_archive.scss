@@ -43,7 +43,7 @@
   .info-div {
     padding: 1.5rem 2.5rem 1rem 2rem;
     h4 {
-      padding: 1rem 0 0.5rem 0;
+      padding: 1rem 0 0 0;
       .title {
         color: $dark;
         text-decoration: none;
@@ -53,8 +53,14 @@
         }
       }
     }
+    .author {
+      padding: 0.25rem 0 0 0;
+    }
+    .excerpt {
+      padding: 1rem 0 0 0;
+    }
     p {
-      padding: 0.4rem 0;
+      padding: 0;
     }
   }
   .read-more {

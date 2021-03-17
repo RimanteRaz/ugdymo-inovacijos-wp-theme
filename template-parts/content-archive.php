@@ -9,8 +9,10 @@
             </div>
         </div>
         <h4><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h4>
-        <p class="text-small">Mokytoja Vardenė Pavardenė<br>Miesto Rašytojo gimnazija</p>
-        <div>
+        <p class="text-small author">
+            <?php echo esc_html(the_field("authors_name"))?>
+        </p>
+        <div class="excerpt">
             <?php the_excerpt(); ?>
         </div>
     </div>
