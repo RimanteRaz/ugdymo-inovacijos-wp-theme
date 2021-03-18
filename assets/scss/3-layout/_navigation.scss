@@ -107,6 +107,7 @@ nav {
 }
 
 .dt-nav-links ul {
+  margin: 0;
   display: none;
   @media (min-width: $tablet) {
     display: flex;

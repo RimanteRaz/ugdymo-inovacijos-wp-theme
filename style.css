@@ -245,8 +245,8 @@ p {
 li {
   line-height: 1.8; }
 
-article ul,
-article ol {
+ul,
+ol {
   margin-left: 2.5em; }
 
 /* 3 - LAYOUT */
@@ -415,6 +415,7 @@ nav {
         border-radius: 5px; }
 
 .dt-nav-links ul {
+  margin: 0;
   display: none; }
   @media (min-width: 43.75em) {
     .dt-nav-links ul {
@@ -1220,6 +1221,9 @@ footer {
       padding: 2.5rem 12ch 3rem 10ch;
       max-width: 90ch;
       margin: 0 auto; } }
+
+.page-title {
+  padding-bottom: 0.5em; }
 
 .article {
   margin-bottom: 2rem;
