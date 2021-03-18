@@ -55,70 +55,16 @@
         </div>
 
         <div class="row-3-col">
-
-          <div class="grid-cell new-post">
-            <div class="img-div">
-              <img
-                src="https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-                alt="">
-            </div>
-            <div class="info-div">
-              <a class="category" href="">Category</a>
-              <h5 class="title"><a href="">Ut enim ad minim veniam, quis nostrud exercitation ullamco</a></h5>
-              <div class="meta">
-                <div class="text-small">Mokytoja Vardenė Pavardenė</div>
-                <div class="text-small">Miesto Rašytojo gimnazija</div>
-              </div>
-            </div>
-            <a href="" class="read-more">
-              <div>
-                Skaityti
-              </div>
-            </a>
-          </div>
-
-          <div class="grid-cell new-post">
-            <div class="img-div">
-              <img
-                src="https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=748&q=80"
-                alt="">
-            </div>
-            <div class="info-div">
-              <a class="category" href="">Category</a>
-              <h5 class="title"><a href="">Ut enim ad minim veniam, quis nostrud exercitation ullamco</a></h5>
-              <div class="meta">
-                <div class="text-small">Mokytoja Vardenė Pavardenė</div>
-                <div class="text-small">Miesto Rašytojo gimnazija</div>
-              </div>
-            </div>
-            <a href="" class="read-more">
-              <div>
-                Skaityti
-              </div>
-            </a>
-          </div>
-
-          <div class="grid-cell new-post">
-            <div class="img-div">
-              <img
-                src="https://images.unsplash.com/photo-1610008885395-d4b47c2f5c8c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
-                alt="">
-            </div>
-            <div class="info-div">
-              <a class="category" href="">Category</a>
-              <h5 class="title"><a href="">Ut enim ad minim veniam, quis nostrud exercitation ullamco</a></h5>
-              <div class="meta">
-                <div class="text-small">Mokytoja Vardenė Pavardenė</div>
-                <div class="text-small">Miesto Rašytojo gimnazija</div>
-              </div>
-            </div>
-            <a href="" class="read-more">
-              <div>
-                Skaityti
-              </div>
-            </a>
-          </div>
-
+          <?php
+            $query = new WP_Query( array('posts_per_page' => 3));
+            if( $query->have_posts() ) {
+                while( $query->have_posts() ) {
+                    $query->the_post();
+                    get_template_part('template-parts/content', 'featured');
+                }
+            }
+            wp_reset_postdata();
+          ?>
         </div>
 
         <div class="read-all-2">

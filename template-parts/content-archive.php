@@ -1,6 +1,6 @@
 <div class="grid-item blog-post">
     <div class="img-div">
-        <img src="<?php the_post_thumbnail_url('large'); ?>" alt="">
+        <img src="<?php echo esc_url(the_post_thumbnail_url('large')); ?>" alt="">
     </div>
     <div class="info-div">
         <div class="categories">
@@ -8,7 +8,7 @@
                 <?php the_category(); ?>
             </div>
         </div>
-        <h4><a href="<?php the_permalink(); ?>" class="title"><?php the_title(); ?></a></h4>
+        <h4><a href="<?php echo esc_url(the_permalink()); ?>" class="title"><?php echo esc_html(the_title()); ?></a></h4>
         <p class="text-small author">
             <?php echo esc_html(the_field("authors_name"))?>
         </p>
