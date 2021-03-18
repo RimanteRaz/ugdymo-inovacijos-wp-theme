@@ -64,7 +64,9 @@ li {
   line-height: 1.8;
 }
 
-ul,
-ol {
+article ul,
+article ol,
+page-content ul,
+page-content ol {
   margin-left: 2.5em;
 }

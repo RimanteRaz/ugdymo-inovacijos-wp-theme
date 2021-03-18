@@ -30,14 +30,26 @@
             </div>
         </div>
         <div class="cat-div">
-            <h6>Kategorija(-os):</h6>
-            <div class="category">
-                <?php the_category(); ?>
-            </div>
+            <?php $categories = wp_get_post_categories(get_the_ID());
+            if ( $categories ): ?>
+                <h6>Kategorija(-os):</h6>
+                <?php foreach($categories as $category) : ?>
+                    <a class="category" href="<?php echo esc_url(get_category_link($category)) ?>">
+                        <?php echo esc_html(get_cat_name($category)) ?>
+                    </a>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
         <div class="tag-div">
-        <h6>Ugdomos komptenecijos:</h6>
-            <?php the_tags('<span class="tag">', '</span><span class="tag">', '</span >'); ?>
+            <?php $tags = get_the_tags();
+            if ( $tags ) : ?>
+                <h6>Ugdomos komptenecijos:</h6>
+                <?php foreach ( $tags as $tag ) : ?>
+                    <a class="tag" href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>">
+                        <?php echo esc_html( $tag->name ); ?>
+                    </a>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>
@@ -57,14 +69,27 @@
         </div>
         </div>
         <div class="cat-div">
-            <h6>Kategorija(-os):</h6>
-            <div class="category">
-                <?php the_category(); ?>
-            </div>
+            <?php $categories = wp_get_post_categories(get_the_ID());
+            if ( $categories ): ?>
+                <h6>Kategorija(-os):</h6>
+                <?php foreach($categories as $category) : ?>
+                    <a class="category" href="<?php echo esc_url(get_category_link($category)) ?>">
+                        <?php echo esc_html(get_cat_name($category)) ?>
+                    </a>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
         <div class="tag-div">
-        <h6>Ugdomos komptenecijos:</h6>
-            <?php the_tags('<span class="tag">', '</span><span class="tag">', '</span >'); ?>
+            <?php
+            $tags = get_the_tags();
+            if ( $tags ) : ?>
+                <h6>Ugdomos komptenecijos:</h6>
+                <?php foreach ( $tags as $tag ) : ?>
+                    <a class="tag" href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>">
+                        <?php echo esc_html( $tag->name ); ?>
+                    </a>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>

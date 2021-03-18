@@ -1,54 +1,35 @@
 <?php
   get_header();
 ?>
+<div class="content section">
+    <div class="container">
+        <?php if( have_posts() ) { ?>
+            <h2 class="archive-title">
+                <?php printf( __( 'Paieškos rezultatai: %s', 'shape' ), '<span>' . esc_html(get_search_query()) . '</span>' ); ?>
+            </h2>
+    </div>
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+                <?php 
+                while( have_posts() ) {
+                    the_post();
+                    
+                    get_template_part('template-parts/content', 'archive');
 
-<div class="content section container">
-    <div class="search-card">
-        <h2 class="section-title">PAIEŠKA</h2>
-        <form action="">
-        <label for="search">Įveskite paieškos terminą:</label>
-        <input type="text" name="search" id="search">
-        <div class="btn-div">
-            <button type="submit" class="btn-primary">Ieškoti</button>
-        </div>
-        </form>
-        <p>Arba pasirinkite vieną iš žemiau pateiktų kategorijų ar kompetencijų.</p>
-        <div class="select-cat-or-tag">
-        <div class="categories">
-            <h6>Kategorijos:</h6>
-            <div>
-            <a href="" class="category">Lietuvių k.</a>
-            <a href="" class="category">Matematika</a>
-            <a href="" class="category">IT</a>
-            <a href="" class="category">Biologija</a>
-            <a href="" class="category">Chemija</a>
-            <a href="" class="category">Fizika</a>
-            <a href="" class="category">Istorija</a>
-            <a href="" class="category">Pilietiškumas</a>
-            <a href="" class="category">Geografija</a>
-            </div>
-        </div>
-        <div class="tags">
-            <h6>Ugdomos kompetencijos:</h6>
-            <div>
-            <a href="" class="tag">Kritinis mąstymas</a>
-            <a href="" class="tag">Kūrybingumas</a>
-            <a href="" class="tag">Problemų sprendimas</a>
-            <a href="" class="tag">Sprendimų priėmimas</a>
-            <a href="" class="tag">Asmeninė atsakomybė</a>
-            <a href="" class="tag">Tyrinėjimas</a>
-            <a href="" class="tag">Tyrinėjimas</a>
-            <a href="" class="tag">Tarpkultrinė kompetencija</a>
-            <a href="" class="tag">Socialiniai gebėjimai</a>
-            <a href="" class="tag">Bendradarbiavimas</a>
-            <a href="" class="tag">Lyderystė</a>
-            </div>
-        </div>
-        </div>
+                }
+            }
+            else {?>
+                
+                <div class="my-5 py-5">
+                    <h2>Paieškos rezultatų nėra</h2>
+                    <p>Nepavyko rasti įrašų, atitiktų jūsų įvestą paieškos terminą: "<?php echo esc_html(get_search_query()) ?> "</p>
+                </div>
+
+            <?php }; ?>
 
     </div>
 </div>
-
 <?php
   get_footer();
 ?>

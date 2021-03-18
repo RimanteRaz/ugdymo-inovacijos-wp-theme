@@ -62,18 +62,6 @@
 .cat-and-tags {
   @extend .card;
   padding: 1rem 1rem 1rem 1.5rem;
-  .cat-div {
-    .category ul li {
-      margin-right: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-  }
-  .tag-div {
-    .tag {
-      margin-right: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-  }
 }
 
 .article-sidebar-mobile {

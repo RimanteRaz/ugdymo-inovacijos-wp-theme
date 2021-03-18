@@ -5,9 +5,14 @@
             alt="">
     </div>
     <div class="info-div">
-        <div class="category">
-            <?php the_category(); ?>
-        </div>
+        <?php $categories = wp_get_post_categories(get_the_ID());
+        if ( $categories ): ?>
+            <?php foreach($categories as $category) : ?>
+                <a class="category" href="<?php echo esc_url(get_category_link($category)) ?>">
+                    <?php echo esc_html(get_cat_name($category)) ?>
+                </a>
+            <?php endforeach; ?>
+        <?php endif; ?>
         <h5 class="title"><a href="<?php echo esc_url(the_permalink()); ?>"><?php echo esc_html(the_title()); ?></a></h5>
         <div class="meta">
             <p class="text-small author">
