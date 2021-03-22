@@ -1,7 +1,43 @@
+<?php if (post_password_required() ){
+    return;
+} ?>
+
 <div>
-    <h3 class="bold">Klausimai bei patarimai</h3>
-    <!-- COMMENT -->
-    <div class="comment">
+    <?php 
+    if(have_comments()): ?>
+
+        <h3 class="bold">Klausimai bei patarimai</h3>
+        <!-- COMMENT -->
+        <?php the_comments_navigation(); ?>
+        <ol>
+            <?php 
+            wp_list_comments(
+                array(
+                    'style' => 'ol',
+                    'short_ping' => true,
+                    'max_depth' => 3,
+                    // 'avatar_size' => 32,
+                )
+                );
+            ?>
+        </ol>
+
+        <?php 
+        the_comments_navigation();
+        if( ! comments_open() ):
+            ?>
+            <p><?php esc_html_e('Comments are closed.', '_s'); ?></p>
+            <?php 
+        endif;
+    
+    endif;  
+
+    comment_form();
+    ?>
+    <!-- Close have_comments() if statement -->
+
+
+    <!-- <div class="comment">
         <div class="comment-head">
             <div class="avatar">
                 <img src="images/kavatar.png" alt="">
@@ -19,9 +55,10 @@
         <div>
             <a href="" class="btn-secondary">Reply</a>
         </div>
-    </div>
+    </div> -->
+
     <!-- COMMENT REPLY -->
-    <div class="comment-reply">
+    <!-- <div class="comment-reply">
         <div class="comment">
             <div class="comment-head">
                 <div class="avatar">
@@ -41,5 +78,5 @@
                 <a href="" class="btn-secondary">Reply</a>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>

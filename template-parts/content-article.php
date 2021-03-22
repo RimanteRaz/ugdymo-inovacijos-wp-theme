@@ -55,6 +55,10 @@
             <?php dynamic_sidebar( 'article_1' ); ?>
         <?php } ?>
     </div>
+
+    <?php if ( comments_open() || get_comments_number() ) :
+				comments_template();
+	endif; ?>
 </div>
 
 <div class="col-30">
