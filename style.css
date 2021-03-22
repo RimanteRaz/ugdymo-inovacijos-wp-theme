@@ -248,8 +248,8 @@ li {
 
 article ul,
 article ol,
-page-content ul,
-page-content ol {
+.page-content ul,
+.page-content ol {
   margin-left: 2.5em; }
 
 /* 3 - LAYOUT */
