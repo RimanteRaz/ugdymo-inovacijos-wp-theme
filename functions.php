@@ -65,6 +65,19 @@ function footer_right_widget_init() {
 
 add_action( 'widgets_init', 'footer_right_widget_init');
 
+function submit_widget_init() {
+    register_sidebar(array(
+        'name' => 'Submit Page',
+        'id' => "submit_widget_1",
+        'before_widget' => '<div class = "submitWidget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5>',
+        'after_title' => '</h5>',
+    ));
+}
+
+add_action( 'widgets_init', 'submit_widget_init');
+
 // Add Customizer Settings:
 
 function ugdino_nav_cta($wp_customize) {
