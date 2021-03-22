@@ -249,7 +249,15 @@ li {
 article ul,
 article ol,
 .page-content ul,
-.page-content ol {
+.page-content ol,
+.footerWidgetLeft ul,
+.footerWidgetLeft ol,
+.footerWidgetRight ul,
+.footerWidgetRight ol,
+.submitWidget ul,
+.submitWidget ol,
+.articleWidget ul,
+.articleWidget ol {
   margin-left: 2.5em; }
 
 /* 3 - LAYOUT */
@@ -1289,6 +1297,14 @@ footer {
   padding-bottom: 0.5rem; }
   .article-sidebar-mobile .author p {
     padding-bottom: 0.05em; }
+
+.articleWidget h6 {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem; }
+
+.articleWidget:nth-of-type(1) h6 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
 
 /* 5 - Wordpress overwrite */
 

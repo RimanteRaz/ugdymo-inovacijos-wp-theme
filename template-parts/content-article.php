@@ -51,6 +51,9 @@
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
+        <?php if( is_active_sidebar('article_1') ) { ?>
+            <?php dynamic_sidebar( 'article_1' ); ?>
+        <?php } ?>
     </div>
 </div>
 
@@ -91,5 +94,8 @@
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
+        <?php if( is_active_sidebar('article_1') ) { ?>
+            <?php dynamic_sidebar( 'article_1' ); ?>
+        <?php } ?>
     </div>
 </div>

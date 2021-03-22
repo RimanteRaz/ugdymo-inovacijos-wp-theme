@@ -78,6 +78,19 @@ function submit_widget_init() {
 
 add_action( 'widgets_init', 'submit_widget_init');
 
+function article_widget_init() {
+    register_sidebar(array(
+        'name' => 'Article Sidebar',
+        'id' => "article_1",
+        'before_widget' => '<div class = "articleWidget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h6>',
+        'after_title' => '</h6>',
+    ));
+}
+
+add_action( 'widgets_init', 'article_widget_init');
+
 // Add Customizer Settings:
 
 function ugdino_nav_cta($wp_customize) {
