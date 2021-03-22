@@ -52,4 +52,44 @@ add_action('wp_enqueue_scripts', 'ugdino_register_scripts');
 // 
 // add_action( 'widgets_init', 'footer_widget_init');
 
+function ugdino_nav_cta($wp_customize) {
+    $wp_customize->add_section('ugdino-nav-cta-section',array(
+        'title' => __('Nav CTA')
+    ));
+
+    $wp_customize->add_setting('ugdino-nav-cta-display', array(
+        'default' => 1,
+        'sanitize_callback' => 'esc_attr',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ugdino-nav-cta-display-control', array(
+        'type' => 'checkbox',
+        'label' => __('Display the CTA in the Navigation bar'),
+        'section' => 'ugdino-nav-cta-section',
+        'settings' => 'ugdino-nav-cta-display'
+    )));
+
+    $wp_customize->add_setting('ugdino-nav-cta-text', array(
+        'default' => 'Atsiųskite savo inovaciją'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ugdino-nav-cta-text-control', array(
+        'label' => __('Call-to-action button text'),
+        'section' => 'ugdino-nav-cta-section',
+        'settings' => 'ugdino-nav-cta-text'
+    )));
+
+    $wp_customize->add_setting('ugdino-nav-cta-link');
+
+    $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'ugdino-nav-cta-link-control', array(
+        'label' => __('Call To Action button link'),
+        'section' => 'ugdino-nav-cta-section',
+        'settings' => 'ugdino-nav-cta-link',
+        'type' => 'dropdown-pages'
+    )));
+}
+
+add_action('customize_register', 'ugdino_nav_cta');
+
+
 ?>

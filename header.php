@@ -41,7 +41,12 @@
           );
           ?>
         </div>
-        <a href="page.html" class="nav-cta btn-light">Atsiųskite savo inovaciją</a>
+        <?php if (get_theme_mod('ugdino-nav-cta-display') == 1) {?>
+          <a href="<?php echo esc_url(get_permalink(get_theme_mod('ugdino-nav-cta-link'))) ?>" 
+          class="nav-cta btn-light">
+            <?php echo esc_html(get_theme_mod('ugdino-nav-cta-text')) ?>
+          </a>
+        <?php } ?>
       </div>
       <div class="dt-nav-bar">
         <div class="dt-nav-links dt-primary-menu">
@@ -56,10 +61,18 @@
           );
           ?>
         </div>
-        <div class="dt-nav-cta">
-          <a href="page.html" class="btn-light"><img
-              src="https://img.icons8.com/metro/26/000000/paper-plane.png" /><span>Atsiųskite savo inovaciją</span></a>
-        </div>
+        <?php if (get_theme_mod('ugdino-nav-cta-display') == 1) {?>
+          <div class="dt-nav-cta">
+            <a href="<?php echo esc_url(get_permalink(get_theme_mod('ugdino-nav-cta-link'))) ?>" class="btn-light"><img
+                src="https://img.icons8.com/metro/26/000000/paper-plane.png" />
+                <span>
+                  
+                  <?php echo esc_html(get_theme_mod('ugdino-nav-cta-text')) ?>
+                  
+                </span>
+            </a>
+          </div>
+        <?php } ?>
         <div class="dt-nav-links dt-secondary-menu">
           <?php
             wp_nav_menu(
