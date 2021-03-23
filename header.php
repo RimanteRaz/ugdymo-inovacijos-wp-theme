@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <nav <?php echo (is_admin_bar_showing()) ? ' style="top: 32px;"' : ''; ?>>
+  <nav class="top-nav" <?php echo (is_admin_bar_showing()) ? ' style="top: 32px;"' : ''; ?>>
     <div class="nav-container">
       <div class="logo">
         <h6><a href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h6>

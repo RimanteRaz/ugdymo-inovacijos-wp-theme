@@ -23,7 +23,7 @@ a {
     outline: none;
     background-color: rgba(82, 178, 208, 0.4); }
 
-.btn, .btn-primary, .comment .comment-reply-link, .comment-form .form-submit .submit, .search-card #searchform #searchsubmit, .btn-secondary, .comment-reply-title #cancel-comment-reply-link, .btn-light {
+.btn, .btn-primary, .comment .comment-reply-link, .comment-form .form-submit .submit, .search-card #searchform #searchsubmit, .btn-secondary, .pagination .nav-links .next, .pagination .nav-links .prev, .comment-reply-title #cancel-comment-reply-link, .btn-light {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -36,7 +36,7 @@ a {
   transition: background-color 0.3s ease;
   text-decoration: none;
   cursor: pointer; }
-  .btn:focus, .btn-primary:focus, .comment .comment-reply-link:focus, .comment-form .form-submit .submit:focus, .search-card #searchform #searchsubmit:focus, .btn-secondary:focus, .comment-reply-title #cancel-comment-reply-link:focus, .btn-light:focus {
+  .btn:focus, .btn-primary:focus, .comment .comment-reply-link:focus, .comment-form .form-submit .submit:focus, .search-card #searchform #searchsubmit:focus, .btn-secondary:focus, .pagination .nav-links .next:focus, .pagination .nav-links .prev:focus, .comment-reply-title #cancel-comment-reply-link:focus, .btn-light:focus {
     outline: none;
     -webkit-box-shadow: 0 0 0 3px #52b2d0;
             box-shadow: 0 0 0 3px #52b2d0; }
@@ -50,12 +50,12 @@ a {
   .btn-primary:focus, .comment .comment-reply-link:focus, .comment-form .form-submit .submit:focus, .search-card #searchform #searchsubmit:focus {
     background-color: #00576b; }
 
-.btn-secondary, .comment-reply-title #cancel-comment-reply-link {
+.btn-secondary, .pagination .nav-links .next, .pagination .nav-links .prev, .comment-reply-title #cancel-comment-reply-link {
   background-color: rgba(224, 225, 228, 0.8);
   color: #141414; }
-  .btn-secondary:hover, .comment-reply-title #cancel-comment-reply-link:hover {
+  .btn-secondary:hover, .pagination .nav-links .next:hover, .pagination .nav-links .prev:hover, .comment-reply-title #cancel-comment-reply-link:hover {
     background-color: #e0e1e4; }
-  .btn-secondary:focus, .comment-reply-title #cancel-comment-reply-link:focus {
+  .btn-secondary:focus, .pagination .nav-links .next:focus, .pagination .nav-links .prev:focus, .comment-reply-title #cancel-comment-reply-link:focus {
     background-color: rgba(224, 225, 228, 0.8); }
 
 .btn-light {
@@ -198,11 +198,11 @@ h4 {
     h4 {
       font-size: 1.5625rem; } }
 
-h5 {
+h5, .pagination h2 {
   padding: 1em 0em 0.25em 0em;
   font-size: 1.15rem; }
   @media (min-width: 43.75em) {
-    h5 {
+    h5, .pagination h2 {
       font-size: 1.25rem; } }
 
 h6 {
@@ -214,8 +214,7 @@ h6 {
 
 h2,
 h3,
-h4,
-h5,
+h4, h5, .pagination h2,
 h6 {
   font-weight: 600; }
 
@@ -286,12 +285,12 @@ article ol,
   .footer .left {
     max-width: 45ch;
     padding-bottom: 2rem; }
-    .footer .left h5 {
+    .footer .left h5, .footer .left .pagination h2, .pagination .footer .left h2 {
       padding-top: 0; }
   .footer .right {
     max-width: 50ch; }
 
-nav {
+.top-nav {
   width: 100%;
   background-color: #141414;
   position: fixed;
@@ -826,6 +825,41 @@ footer {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem; }
+  .pagination h2 {
+    padding-bottom: 1rem; }
+  .pagination .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .pagination .nav-links .page-numbers {
+      margin: 0 0.25rem; }
+    .pagination .nav-links .next {
+      padding: 0.3rem 1rem;
+      margin-left: 0.75rem; }
+    .pagination .nav-links .prev {
+      padding: 0.3rem 1rem;
+      margin-right: 0.75rem; }
 
 .comment .comment-body {
   display: -webkit-box;
