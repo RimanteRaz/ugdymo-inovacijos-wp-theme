@@ -6,7 +6,7 @@
     <?php 
     if(have_comments()): ?>
 
-        <h3 class="bold">Klausimai bei patarimai</h3>
+        <h3 class="bold comments-title">Klausimai bei patarimai</h3>
         <!-- COMMENT -->
         <?php the_comments_navigation(); ?>
         <ol>
@@ -15,7 +15,7 @@
                 array(
                     'style' => 'ol',
                     'short_ping' => true,
-                    'max_depth' => 3,
+                    'max_depth' => 2,
                     // 'avatar_size' => 32,
                 )
                 );

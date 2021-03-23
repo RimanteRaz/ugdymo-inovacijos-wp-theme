@@ -3,8 +3,14 @@
   .comment-body {
     display: flex;
     flex-direction: column;
+    .comment-awaiting-moderation {
+      order: -3;
+      color: $dark-red;
+      padding-bottom: 0.5rem;
+      font-weight: 600;
+    }
     .comment-meta {
-      order: 1;
+      order: -2;
       display: flex;
       justify-content: space-between;
       a:nth-of-type(1) {
@@ -19,7 +25,7 @@
       }
     }
     .comment-author {
-      order: 2;
+      order: -1;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -32,14 +38,14 @@
       }
     }
     p {
-      order: 3;
+      order: 1;
       padding: 0.75rem 0;
       @media (min-width: $tablet) {
         padding: 1rem 0;
       }
     }
     .reply {
-      order: 4;
+      order: 2;
       @media (min-width: $tablet) {
         display: flex;
         justify-content: flex-end;
@@ -58,10 +64,11 @@
   margin-bottom: 1.5rem;
   padding: 1rem 1.2rem 1rem 1.2rem;
   @media (min-width: $tablet) {
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
     margin-bottom: 2rem;
   }
   @media (min-width: $small-screen) {
+    padding: 1.5rem 2.5rem;
     margin-bottom: 2.5rem;
   }
 }
@@ -69,21 +76,34 @@
 .depth-2 {
   padding: 1rem;
   margin-left: 2vw;
+  background-color: $light-1;
+  margin-top: 1rem;
+  @media (min-width: $tablet) {
+    margin-left: 5vw;
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+  @media (min-width: $small-screen) {
+    margin-left: 3vw;
+  }
+}
+
+.depth-3 {
+  padding: 1rem;
+  margin-left: 2vw;
   background-color: $light-2;
   margin-top: 1rem;
   @media (min-width: $tablet) {
     margin-left: 5vw;
     padding: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
   @media (min-width: $small-screen) {
     margin-left: 3vw;
-    // padding: 1.5rem;
-    // margin-top: 2rem;
   }
 }
 
-.depth-3 {
+.depth-4 {
   padding: 1rem;
   margin-left: 2vw;
   background-color: $light-gray;
@@ -91,91 +111,94 @@
   @media (min-width: $tablet) {
     margin-left: 5vw;
     padding: 1.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
   }
   @media (min-width: $small-screen) {
     margin-left: 3vw;
-    // padding: 2rem;
-    // margin-top: 2rem;
   }
 }
 
-//   .comment-head {
-//     display: flex;
-//     flex-direction: row;
-//     padding-bottom: 1rem;
-//     .avatar {
-//       width: 60px;
-//       height: 60px;
-//       overflow: hidden;
-//       border-radius: 30px;
-//       img {
-//         max-width: 100%;
-//         height: auto;
-//       }
-//     }
-//     .user-info {
-//       padding-left: 0.8rem;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       p {
-//         padding: 0;
-//       }
-//       .text-small {
-//         color: $dark-gray;
-//       }
-//     }
-//   }
+.comment-reply-title,
+.comments-title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
 
-//   .comment-content {
-//     padding-bottom: 1rem;
-//   }
+.comment-reply-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  #cancel-comment-reply-link {
+    @extend .btn-secondary, .text-medium;
+  }
+}
 
-// .comment-reply {
-//   padding-left: 5vw;
-//   @media (min-width: $tablet) {
-//     padding-left: 10vw;
-//   }
-//   @media (min-width: $small-screen) {
-//     padding-left: 6vw;
-//   }
-// }
+.comment-form {
+  display: flex;
+  flex-wrap: wrap;
+  @extend .card;
+  padding: 1rem 1.2rem 1rem 1.2rem;
 
-// .add-comment {
-//   @extend .card;
-//   padding: 0 1rem 1.2rem 1rem;
-//   @media (min-width: $tablet) {
-//     padding: 1.5rem;
-//   }
-//   @media (min-width: $small-screen) {
-//     padding: 0 4rem 1.4rem 2.5rem;
-//   }
-//   form {
-//     margin-top: 0.25rem;
-//     .row-2-col {
-//       @media (min-width: $tablet) {
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: space-between;
-//       }
-//       .comment-col-50 {
-//         @media (min-width: $tablet) {
-//           width: 48%;
-//         }
-//       }
-//     }
-
-//     input,
-//     textarea {
-//       width: 100%;
-//       margin-top: 0.25rem;
-//       margin-bottom: 0.8rem;
-//     }
-//     .btn-div {
-//       display: flex;
-//       justify-content: flex-end;
-//       margin-top: 1.2rem;
-//     }
-//   }
-// }
+  @media (min-width: $tablet) {
+    padding: 1.5rem 2rem;
+  }
+  @media (min-width: $small-screen) {
+    padding: 1.5rem 2.5rem;
+  }
+  .comment-notes {
+    color: $dark-gray;
+    @extend .text-small;
+  }
+  .comment-form-comment,
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    label {
+      font-weight: 600;
+    }
+  }
+  .comment-form-comment {
+    width: 100%;
+    textarea {
+      width: 100%;
+    }
+  }
+  .comment-form-author {
+    max-width: 500px;
+    margin-right: auto;
+    @media (min-width: $tablet) {
+      min-width: 47%;
+    }
+    input {
+      width: 100%;
+    }
+  }
+  .comment-form-email,
+  .comment-form-url {
+    max-width: 500px;
+    @media (min-width: $tablet) {
+      min-width: 47%;
+    }
+    input {
+      width: 100%;
+    }
+  }
+  .comment-form-cookies-consent {
+    input {
+      display: inline;
+    }
+    label {
+      color: $dark-gray;
+      display: inline;
+    }
+  }
+  .form-submit {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .submit {
+      @extend .btn-primary;
+      align-self: flex-end;
+    }
+  }
+}
