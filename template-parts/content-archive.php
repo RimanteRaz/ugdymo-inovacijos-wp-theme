@@ -15,7 +15,8 @@
         </div>
         <h4><a href="<?php echo esc_url(the_permalink()); ?>" class="title"><?php echo esc_html(the_title()); ?></a></h4>
         <p class="text-small author">
-            <?php echo esc_html(the_field("authors_name"))?>
+            <?php echo esc_html(the_field("authors_name"))?></br>
+            <?php echo esc_html(the_field("authors_school"))?>
         </p>
         <div class="excerpt">
             <?php the_excerpt(); ?>
