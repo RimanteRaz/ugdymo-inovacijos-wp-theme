@@ -20,20 +20,29 @@ navToggle();
 
 // Masonry layot (WP core)
 
-jQuery(function ($) {
-  var $grid = $(".grid").masonry({
-    // options
-    itemSelector: ".grid-item",
-    // columnWidth: 500,
-    columnWidth: ".grid-sizer",
-    // gutter: 120,
-    gutter: ".gutter-sizer",
-    percentPosition: true,
-    horizontalOrder: true,
-    // fitWidth: true,
-  });
-  // layout Masonry after each image loads
-  $grid.imagesLoaded().progress(function () {
-    $grid.masonry("layout");
-  });
+var msnry = new Masonry(".grid", {
+  // options
+  itemSelector: ".grid-item",
+  columnWidth: ".grid-sizer",
+  gutter: ".gutter-sizer",
+  percentPosition: true,
+  horizontalOrder: true,
 });
+
+// jQuery(function ($) {
+//   var $grid = $(".grid").masonry({
+//     // options
+//     itemSelector: ".grid-item",
+//     // columnWidth: 500,
+//     columnWidth: ".grid-sizer",
+//     // gutter: 120,
+//     gutter: ".gutter-sizer",
+//     percentPosition: true,
+//     horizontalOrder: true,
+//     // fitWidth: true,
+//   });
+//   // layout Masonry after each image loads
+//   $grid.imagesLoaded().progress(function () {
+//     $grid.masonry("layout");
+//   });
+// });
