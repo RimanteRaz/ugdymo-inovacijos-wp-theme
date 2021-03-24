@@ -50,7 +50,7 @@
             <h2 class="section-title">NAUJAUSI ĮRAŠAI</h2>
           </div>
           <div class="col-50 read-all-1">
-            <a class="btn-primary text-large" href="">Visi įrašai</a>
+            <a class="btn-primary text-large" href="<?php echo esc_url(get_post_type_archive_link( 'post' )); ?>">Visi įrašai</a>
           </div>
         </div>
 
@@ -68,7 +68,7 @@
         </div>
 
         <div class="read-all-2">
-          <a class="btn-primary text-large" href="">Visi įrašai</a>
+          <a class="btn-primary text-large" href="<?php echo esc_url(get_post_type_archive_link( 'post' )); ?>">Visi įrašai</a>
         </div>
 
       </div>
