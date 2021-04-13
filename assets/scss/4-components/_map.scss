@@ -1,0 +1,33 @@
+.marker-cluster-small {
+  background-color: rgba(#095e71, 0.6) !important;
+  div {
+    background-color: rgba(#095e71, 0.9) !important;
+    span {
+      color: $light-1;
+    }
+  }
+}
+
+.marker-cluster-medium {
+  background-color: rgba(#2b598a, 0.6) !important;
+  div {
+    background-color: rgba(#2b598a, 0.9) !important;
+    span {
+      color: $light-1;
+    }
+  }
+}
+
+.marker-cluster-large {
+  background-color: rgba(#46409c, 0.6) !important;
+  div {
+    background-color: rgba(#46409c, 0.9) !important;
+    span {
+      color: $light-1;
+    }
+  }
+}
+
+.leaflet-pop {
+  border: 5px solid red;
+}
